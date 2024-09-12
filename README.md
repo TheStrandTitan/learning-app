@@ -3,22 +3,26 @@
 This is a test project for attempting to implement a React app which utilizes state management. The goal of the project is to accomplish the following:
 
 * Incorperate state management
+   
     Current status: Will need to research and understand how React manages state and how to write my own method of maintaining state.
 
-* Display an image on the main project screen. 
-    One image should be static and saved on the project, the other should be a URL-based image.
+* Display an image on the main project screen. One image should be static and saved on the project, the other should be a URL-based image.
+        
         Current Status: Two images are added, planning to keep one as the static image and find another one to add in a URL at a later time.
 
 * Use craco with this project and integrate it into the project.
     Current status: Craco is partially configured and utilizes an option to specify developer mode with a few options, as well as running on port 3612.
 
 * Needs to display my name on the banner which is given based upon a variable set in a .env file.
+
     Current Status: Have not attempted to provide functionality to the feature yet.
 
 * Must be able to run the project in developer mode and production mode.
+
     Current status: Program has developer mode features (As far as I can understand), but I have not attempted to get it working on a production mode yet.
 
 * Must utilize Docker Desktop for running a container for production mode.
+
     Current Progress: Haven't started on Docker yet, will need to spend time learning it.
 
 
