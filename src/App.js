@@ -19,7 +19,7 @@ function ClickManager() {
 }
 
 
-
+/*
 function ImageTester() {
   let count = -1;
     const refreshVal = Number(localStorage.getItem("incrementRefresh")) || 0;
@@ -34,7 +34,7 @@ function ImageTester() {
     </div>
   );
 }
-
+*/
 
 
 
@@ -46,7 +46,6 @@ function App() {
         <h1> Practice Test</h1>
         <ClickManager />
         <h2>Image Test</h2>
-        <ImageTester />
       </header>
     </div>
   );
