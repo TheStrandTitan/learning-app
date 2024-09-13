@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import staticImageSaved from './assets/images/plainSquare.jpg'
 import { useState } from "react";
+import config from "public/config.js";
 
 function ImageTester() {
 
@@ -34,7 +35,7 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <title>{process.env.REACT_APP_BANNER_NAME}.</title>
+        <title>{}.</title>
         <h1> Practice Test</h1>
         <ClickManager count={count} ifClicked={handleClick} />
         <ClickManager count={count} ifClicked={handleClick} />
