@@ -32,7 +32,7 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <title>Put Title Here.</title>
+        <title>{process.env.REACT_APP_BANNER_NAME}.</title>
         <h1> Practice Test</h1>
         <ClickManager count={count} ifClicked={handleClick} />
         <ClickManager count={count} ifClicked={handleClick} />
