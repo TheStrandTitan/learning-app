@@ -15,7 +15,6 @@ function ImageTester() {
     <div>
         <h2>Saved image test below.</h2>
         <img className='redSquare' alt='Normal Red Square' src={staticImageSaved} onLoad={clickedImage}></img>
-        <h3>This Image has been loaded {imageCount} time(s).</h3>
 
     </div>
   );
@@ -33,6 +32,7 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <title>Put Title Here.</title>
         <h1> Practice Test</h1>
         <ClickManager count={count} ifClicked={handleClick} />
         <ClickManager count={count} ifClicked={handleClick} />
