@@ -1,54 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import staticImageSaved from './plainSquare.jpg';
-
-import { useState } from 'react';
-
-function ClickManager() {
-  const [count, clickCheck] = useState(0)
-  function handleClickCheck() {
-      clickCheck(count + 1);
-  }
-
-  return ( 
-    <button onClick={handleClickCheck}>
-      This button has been clicked {count} times.
-    </button>
-  );
-
-}
+import { useState } from "react";
 
 
-/*
 function ImageTester() {
-  let count = -1;
-    const refreshVal = Number(localStorage.getItem("incrementRefresh")) || 0;
-    count = refreshVal + 1;
-    localStorage.setItem("incrementRefresh", count);
+  const [imageCount, setImageCount] = useState(0);
 
+  function clickedImage() {
+    setImageCount(imageCount + 1);
+  }
+  
   return (
     <div>
-        <img className='redSquare' alt='Normal Red Square' src={staticImageSaved}></img>
-        <h3>This Image has been refreshed {count} times.</h3>
+        <h2>Saved image test below.</h2>
+        <img className='redSquare' alt='Normal Red Square' src={staticImageSaved} onLoad={clickedImage}></img>
+        <h3>This Image has been loaded {imageCount} time(s).</h3>
 
     </div>
   );
 }
-*/
 
 
+export default function App() {
+  const [count, setCount] = useState(0);
 
-function App() {
+  function handleClick() {
+    setCount(count + 1);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1> Practice Test</h1>
-        <ClickManager />
-        <h2>Image Test</h2>
+        <ClickManager count={count} ifClicked={handleClick} />
+        <ClickManager count={count} ifClicked={handleClick} />
+        <ClickManager count={count} />
+        <ImageTester />
+        <h2>URL .env file image test below</h2>
+        <img className='Destiny2' alt='Destiny 2 Guardians' src={process.env.REACT_APP_IMAGE_URL} width="1000" height="600"></img>
       </header>
     </div>
   );
 }
 
-export default App;
+function ClickManager({count, ifClicked}) {
+  return (
+    <button onClick={ifClicked}>
+      This button has been clicked {count} times.
+    </button>
+  );
+}

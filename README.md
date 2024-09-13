@@ -8,7 +8,7 @@ This is a test project for attempting to implement a React app which utilizes st
 
 * Display an image on the main project screen. One image should be static and saved on the project, the other should be a URL-based image.
         
-   Current Status: Two images are added, planning to keep one as the static image and find another one to add in a URL at a later time.
+   Current Status: One static image can be displayed but I have commented out that portion of the code for now. The other image has been added via a URL in the .env folder and displays on the page correctly. Not sure if I need to add in anything else besides that but it works for now at least...
 
 * Use craco with this project and integrate it into the project.
     
@@ -24,7 +24,7 @@ This is a test project for attempting to implement a React app which utilizes st
 
 * Must utilize Docker Desktop for running a container for production mode.
 
-    Current Progress: Haven't started on Docker yet, will need to spend time learning it.
+    Current Progress: I have installed docker and opened it, but have not started learning how to make it work yet.
 
 
 
