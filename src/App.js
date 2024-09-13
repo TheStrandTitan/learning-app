@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import staticImageSaved from './assets/images/plainSquare.jpg'
 import { useState } from "react";
-import config from "public/config.js";
+import config from "./config";
 
 function ImageTester() {
 
@@ -35,14 +35,14 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <title>{}.</title>
+        <title>{config.tabName}.</title>
         <h1> Practice Test</h1>
         <ClickManager count={count} ifClicked={handleClick} />
         <ClickManager count={count} ifClicked={handleClick} />
         <ClickManager count={count} />
         <ImageTester />
         <h2>URL .env file image test below</h2>
-        <img className='Destiny2' alt='Destiny 2 Guardians' src={process.env.REACT_APP_IMAGE_URL} width="1000" height="600"></img>
+        <img className='Destiny2' alt='Destiny 2 Guardians' src={config.pictureURL} width="1000" height="600"></img>
       </header>
     </div>
   );
