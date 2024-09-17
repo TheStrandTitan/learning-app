@@ -1,30 +1,30 @@
-# Default ReadMe for React app is visible below. Last updated date: 9/12/2024
+# Default ReadMe for React app is visible below. Last updated date: 9/17/2024
 
 This is a test project for attempting to implement a React app which utilizes state management. The goal of the project is to accomplish the following:
 
 * Incorperate state management
    
-    Current status: Will need to research and understand how React manages state and how to write my own method of maintaining state.
+    Current status: Used sessionStorage to manage state for this implementation. Other suggestions in the future may incorperate other state management systems, but this seems alright for now.
 
 * Display an image on the main project screen. One image should be static and saved on the project, the other should be a URL-based image.
         
-   Current Status: One static image can be displayed but I have commented out that portion of the code for now. The other image has been added via a URL in the .env folder and displays on the page correctly. Not sure if I need to add in anything else besides that but it works for now at least...
+   Current Status: Both images display correctly on the project in both developer, production, and docker container modes.
 
 * Use craco with this project and integrate it into the project.
     
-    Current status: Craco is partially configured and utilizes an option to specify developer mode with a few options, as well as running on port 3612.
+    Current status: Craco is partially configured and utilizes an option to specify developer mode with a few options, as well as running on port 3612. I did not add any more configuration with it for this project yet other than the basic functionality and script rewriting.
 
 * Needs to display my name on the banner which is given based upon a variable set in a .env file.
 
-    Current Status: Have not attempted to provide functionality to the feature yet.
+    Current Status: Completed, displays my name on the tab from a value set in the .env file. Works on dev, prod, and Docker container.
 
 * Must be able to run the project in developer mode and production mode.
 
-    Current status: Program has developer mode features (As far as I can understand), but I have not attempted to get it working on a production mode yet.
+    Current status: Developer mode is default and it ran correctly. The production mode also runs correctly locally, and I have gotten it running on a Docker container too. I do not know if there is anything I did that was unconventional for the container, but for the time being I'll call it a success.
 
 * Must utilize Docker Desktop for running a container for production mode.
 
-    Current Progress: I have installed docker and opened it, but have not started learning how to make it work yet.
+    Current Progress: I have installed docker and believe I have it working correctly. The container did not work when I attempted to use auto-generated Docker features but doing a manual Dockerfile and .dockerignore seemed to fix the problem and everything runs as it should.
 
 
 
