@@ -20,7 +20,7 @@ This is a test project for attempting to implement a React app which utilizes st
 
 * Must be able to run the project in developer mode and production mode.
 
-    Current status: Developer mode is default and it ran correctly. The production mode also runs correctly locally, and I have gotten it running on a Docker container too. I do not know if there is anything I did that was unconventional for the container, but for the time being I'll call it a success.
+    Current status: Developer mode is default and it ran correctly. The production mode does not run correctly locally at this time using nginx.
 
 * Must utilize Docker Desktop for running a container for production mode.
 
