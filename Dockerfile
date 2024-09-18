@@ -1,14 +1,7 @@
-FROM node:latest
+FROM nginx:alpine
 
-WORKDIR /usr/src/app/learningTestHere/
+COPY  ./build /usr/share/nginx/html
 
-COPY package.json ./
+EXPOSE 80
 
-RUN npm install
-RUN npm install -g serve
-
-COPY . .
-
-RUN npm run build
-
-CMD npm run start
+CMD ["nginx", "-g", "daemon off;"]

@@ -29,8 +29,6 @@ This is a test project for attempting to implement a React app which utilizes st
 
 
 
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
