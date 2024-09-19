@@ -1,24 +1,25 @@
 import logo from "./logo.svg";
 import "./App.css";
 import staticImageSaved from './assets/images/plainSquare.jpg'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import config from "./config";
 
 function ImageTester() {
 
-  let imageCount = parseInt(sessionStorage.getItem("refreshCount")) || 0;
-  if (imageCount === null) {
-    imageCount = 0;
-  }
-  sessionStorage.setItem("refreshCount", imageCount + 1);
-    
+  const [imageCount, setImageCount] = useState(0);
+
+  useEffect(() => {
+  let count = parseInt(sessionStorage.getItem("refreshCount")) || 0;
+  sessionStorage.setItem("refreshCount", count + 1);
+  setImageCount(count);
+  }, []);
 
 
   return (
     <div>
         <h2>Saved image test below.</h2>
         <img className='redSquare' alt='Normal Red Square' src={staticImageSaved}></img>
-        <h3>Page has been refreshed {imageCount} times.</h3>
+        <h3>Page has been refreshed {imageCount} time(s).</h3>
     </div>
   );
 }
