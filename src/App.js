@@ -4,6 +4,13 @@ import staticImageSaved from './assets/images/plainSquare.jpg'
 import { useEffect, useState } from "react";
 import config from "./config";
 
+if (sessionStorage.getItem("tab") === null || sessionStorage.getItem("image") === null) {
+  sessionStorage.setItem("tab", config.tabName);
+  sessionStorage.setItem("image", config.pictureURL);
+  let tabCur = config.tabName;
+  let imgCur = config.pictureURL;
+}
+
 function ImageTester() {
 
   const [imageCount, setImageCount] = useState(0);
@@ -24,6 +31,10 @@ function ImageTester() {
   );
 }
 
+function handleAlter() {
+ // localStorage.setItem
+}
+
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -39,8 +50,7 @@ export default function App() {
         <title>{config.tabName}.</title>
         <h1> Practice Test</h1>
         <ClickManager count={count} ifClicked={handleClick} />
-        <ClickManager count={count} ifClicked={handleClick} />
-        <ClickManager count={count} />
+        <ConfigAlter ifClicked={handleAlter} />
         <ImageTester />
         <h2>URL .env file image test below</h2>
         <img className='Destiny2' alt='Destiny 2 Guardians' src={config.pictureURL} width="1000" height="600"></img>
@@ -55,4 +65,12 @@ function ClickManager({count, ifClicked}) {
       This button has been clicked {count} times.
     </button>
   );
+}
+
+function ConfigAlter({changeConfig}) {
+  return (
+    <button onClick={changeConfig}>
+      This button changes the state of the items which utilize config values.
+    </button>
+  )
 }
