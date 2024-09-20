@@ -4,6 +4,4 @@ const config = {
     
 };
 
-// Potentially update variables via functions within this command file?
-
 export default config;

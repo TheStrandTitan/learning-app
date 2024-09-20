@@ -42,7 +42,7 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <title>{config.tabName}.</title>
+        <title>{config.tabName}</title>
         {enableParamHandler && <QueryHandler />}
         <h1> Practice Test</h1>
         <ClickManager count={count} ifClicked={handleClick} />
