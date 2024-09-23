@@ -35,7 +35,7 @@ function ImageTester() {
 export default function App() {
 
 
-  // Added block of code for managing state and refreshing page when URL parameters update.
+  // Added following block of code for managing state and refreshing page when URL parameters update.
   const [, setQueryChange] = useState(false);
   function handleQueryChange() {
     setQueryChange(queryChange => !queryChange);
@@ -46,6 +46,8 @@ export default function App() {
     setCount(count + 1);
   }
 
+
+  // Router is incorperated below.
   return (
     <Router> 
     <div className="App">
