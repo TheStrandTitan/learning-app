@@ -4,6 +4,8 @@ import staticImageSaved from "./assets/images/plainSquare.jpg";
 import { useEffect, useState } from "react";
 import config from "./config";
 import QueryHandler from "./components/QueryHandler";
+import { BrowserRouter as Router } from "react-router-dom";
+
 
 const enableParamHandler = true; // Use to enable queryString component
 
@@ -32,19 +34,27 @@ function ImageTester() {
 
 export default function App() {
 
-  const [count, setCount] = useState(0);
 
+  // Added block of code for managing state and refreshing page when URL parameters update.
+  const [, setQueryChange] = useState(false);
+  function handleQueryChange() {
+    setQueryChange(queryChange => !queryChange);
+  }
+
+  const [count, setCount] = useState(0);
   function handleClick() {
     setCount(count + 1);
   }
 
   return (
+    <Router> 
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <title>{config.tabName}</title>
-        {enableParamHandler && <QueryHandler />}
+        {enableParamHandler && <QueryHandler onQueryChange={handleQueryChange}/>}
         <h1> Practice Test</h1>
+        <h3>Test boolean value is set to {config.boolCheck}</h3>
         <ClickManager count={count} ifClicked={handleClick} />
         <ImageTester />
         <h2>URL .env file image test below</h2>
@@ -57,6 +67,7 @@ export default function App() {
         ></img>
       </header>
     </div>
+    </Router>
   );
 }
 
