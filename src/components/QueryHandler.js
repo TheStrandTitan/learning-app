@@ -11,21 +11,26 @@ function QueryHandler({ onQueryChange }) {
 
     if (urlParams.has("tabName")) {
       const tabName = urlParams.get("tabName");
-      if (tabName !== "") {
-        config.tabName = tabName;
-        sessionStorage.setItem("tabName", tabName);
-        updatedPage = true;
+      if (sessionStorage.getItem("tabName") !== tabName) {
+        if (tabName !== "") {
+          config.tabName = tabName;
+          sessionStorage.setItem("tabName", tabName);
+          updatedPage = true;
+        }
       }
     }
     if (urlParams.has("pictureURL")) {
       const pictureURL = urlParams.get("pictureURL");
-      config.pictureURL = pictureURL;
-      sessionStorage.setItem("pictureURL", pictureURL);
-      updatedPage = true;
+      if (sessionStorage.getItem("pictureURL") !== pictureURL) {
+        config.pictureURL = pictureURL;
+        sessionStorage.setItem("pictureURL", pictureURL);
+        updatedPage = true;
+      }
     }
     if (urlParams.has("boolCheck")) {
       const boolCheck = urlParams.get("boolCheck");
-      if (boolCheck === "false" || boolCheck === "true") {
+      if (sessionStorage.getItem("boolCheck") !== boolCheck && 
+          (boolCheck === 'true' || boolCheck === 'false')) {
         config.boolCheck = boolCheck;
         sessionStorage.setItem("boolCheck", boolCheck);
         updatedPage = true;
@@ -33,6 +38,7 @@ function QueryHandler({ onQueryChange }) {
     }
 
     if (updatedPage) {
+      console.log("Page Update");
       onQueryChange();
     }
   }, [location.search, onQueryChange]);
