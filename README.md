@@ -1,14 +1,14 @@
-# Steps to run the project in your local environment.
+# How to run the project
 1. clone repository to desired directory.
-2. run `npm install` within learning-app
+2. run `npm install` within the directory `learning-app`.
 3. Start the project through one of 3 methods: 
     * run `npm start` to start local dev server
     * run `npm run build` and then `serve -s build`
     * run `docker build -t docker-multistage-test:latest -f Dockerfile.multistage . && docker run -d -p 8080:80 --name docker-learning-app docker-multistage-test:latest`  
-4. Go to localhost:8080 on your browser
+4. Go to `localhost:8080` on your browser to access the webpage.
 
 # How to use the learning-app
-1. Modify variables on the page by passing a query string such as localhost:8080/?tabName=Test&boolCheck=false
+1. Modify variables on the page by passing a query string such as `localhost:8080/?tabName=HelloWorld&boolCheck=true`
 2. use `&` to separate query string parameters.
 3. Valid parameter keys are `tabName`, `pictureURL`, and `boolCheck`
 4. `tabName` changes the current browser tab name value, `pictureURL` accepts and displays an image on the lower section of the page, and `boolCheck` changes the test boolean, but will only accept `false` or `true` case-sensitive.
@@ -17,13 +17,13 @@
 7. To view all the environmental variables, see the `.env` file or view the `config.js` file located in `src`.
 
 
-## Default ReadMe for React app is visible below. Last updated date: 9/17/2024
+## Default ReadMe for React app is visible below. Last updated date: 9/24/2024
 
 This is a test project for attempting to implement a React app which utilizes state management. The goal of the project is to accomplish the following:
 
-* Incorperate state management
+* Incorporate state management
    
-    Current status: Used sessionStorage to manage state for this implementation. Other suggestions in the future may incorperate other state management systems, but this seems alright for now.
+    Current status: Used sessionStorage to manage state for this implementation. Other suggestions in the future may incorporate other state management systems, but this seems alright for now. QueryHandler file also uses useEffect and updates with each URL entry.
 
 * Display an image on the main project screen. One image should be static and saved on the project, the other should be a URL-based image.
         
@@ -39,8 +39,9 @@ This is a test project for attempting to implement a React app which utilizes st
 
 * Must be able to run the project in developer mode and production mode.
 
-    Current status: Developer mode is default and it ran correctly. The production mode does not run correctly locally at this time using nginx.
+    Current status: Developer mode is default and it ran correctly. Production mode runs correctly and is displayed using serve command. Docker container has also been configured to utilize nginx and works correctly.
+
 
 * Must utilize Docker Desktop for running a container for production mode.
 
-    Current Progress: I have installed docker and believe I have it working correctly. The container did not work when I attempted to use auto-generated Docker features but doing a manual Dockerfile and .dockerignore seemed to fix the problem and everything runs as it should.
+    Current Progress: I have installed docker and believe I have it working correctly. The container did not work when I attempted to use auto-generated Docker features but doing a manual Dockerfile and .dockerignore seemed to fix the problem and everything runs as it should. There is now two commands which will easily create and deploy a docker container for the project.
