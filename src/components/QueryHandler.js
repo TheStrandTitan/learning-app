@@ -12,11 +12,11 @@ function QueryHandler({ onQueryChange }) {
     if (urlParams.has("tabName")) {
       const tabName = urlParams.get("tabName");
       if (sessionStorage.getItem("tabName") !== tabName) {
-        if (tabName !== "") {
+       // if (tabName !== "") {
           config.tabName = tabName;
           sessionStorage.setItem("tabName", tabName);
           updatedPage = true;
-        }
+        //}
       }
     }
     if (urlParams.has("pictureURL")) {
