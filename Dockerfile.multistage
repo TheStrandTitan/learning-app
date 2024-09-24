@@ -9,10 +9,15 @@ RUN npm install
 COPY . .
 
 # Change below ENV variables to alter the starting environmental values at runtime
+ARG REACT_APP_BANNER_NAME=default
+ENV REACT_APP_BANNER_NAME=${REACT_APP_BANNER_NAME}
 
-ENV REACT_APP_BANNER_NAME=TESTER
-ENV REACT_APP_IMAGE_URL=https://www.destinythegame.com/content/dam/destiny/tfs/story/tfs-story-img2.jpg
-ENV REACT_APP_TEST_BOOLEAN=false
+ARG REACT_APP_IMAGE_URL
+ENV REACT_APP_IMAGE_URL=${REACT_APP_IMAGE_URL} 
+# https://www.destinythegame.com/content/dam/destiny/tfs/story/tfs-story-img2.jpg
+
+ARG REACT_APP_TEST_BOOLEAN
+ENV REACT_APP_TEST_BOOLEAN=${REACT_APP_TEST_BOOLEAN}
 
 # End of ENV Variables to alter at runtime
 
