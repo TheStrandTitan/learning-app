@@ -1,5 +1,5 @@
 # How to run the project
-1. clone repository to desired directory.
+1. type `git clone https://github.com/TheStrandTitan/learning-app.git` into a linux directory you want to install the repo in.
 2. run `npm install` within the directory `learning-app`.
 3. Start the project through one of 3 methods: 
     * run `npm start` to start local dev server
