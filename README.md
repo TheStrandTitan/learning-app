@@ -17,7 +17,7 @@
 7. To view all the environmental variables, see the `.env` file or view the `config.js` file located in `src`.
 
 
-## Default ReadMe for React app is visible below. Last updated date: 9/24/2024
+## Last updated date: 9/24/2024
 
 This is a test project for attempting to implement a React app which utilizes state management. The goal of the project is to accomplish the following:
 
@@ -45,3 +45,7 @@ This is a test project for attempting to implement a React app which utilizes st
 * Must utilize Docker Desktop for running a container for production mode.
 
     Current Progress: I have installed docker and believe I have it working correctly. The container did not work when I attempted to use auto-generated Docker features but doing a manual Dockerfile and .dockerignore seemed to fix the problem and everything runs as it should. There is now two commands which will easily create and deploy a docker container for the project.
+
+* Allows enviromental variables to be changed at runtime and default values updated during buildtime.
+
+    Current Progress: Variables are able to be changed by utilizing query string parameters on the URL. The default values can also be individually tweaked during the Docker Container build process by modifying the Dockerfile.multistage file at the indicated section.
