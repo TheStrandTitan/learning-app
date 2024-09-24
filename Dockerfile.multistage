@@ -8,6 +8,14 @@ RUN npm install
 
 COPY . .
 
+# Change below ENV variables to alter the starting environmental values at runtime
+
+ENV REACT_APP_BANNER_NAME=TESTER
+ENV REACT_APP_IMAGE_URL=https://www.destinythegame.com/content/dam/destiny/tfs/story/tfs-story-img2.jpg
+ENV REACT_APP_TEST_BOOLEAN=false
+
+# End of ENV Variables to alter at runtime
+
 RUN npm run build
 
 FROM nginx:alpine
