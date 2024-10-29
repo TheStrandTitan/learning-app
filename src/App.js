@@ -47,7 +47,7 @@ export default function App() {
   }
 
 
-  // Router is incorperated below.
+  // Router is incorporated below.
   return (
     <Router> 
     <div className="App">
